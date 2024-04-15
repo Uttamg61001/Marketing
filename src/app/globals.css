@@ -24,8 +24,19 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    
+    
 }
-
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

@@ -6,14 +6,12 @@ import Form from "@/Components/Form";
 
 export default function Home() {
   return (
-    <main className="">
-      
+    <main>
       {/* <HeroSelection /> */}
-    
-    <CardSelection />
-    <ServiceCard/>
-    <Content/>
-    <Form/>
+      <CardSelection />
+      <ServiceCard />
+      <Content />
+      <Form />
     </main>
   );
 }

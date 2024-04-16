@@ -7,8 +7,8 @@ import Form from "@/Components/Form";
 export default function Home() {
   return (
     <main>
-      {/* <HeroSelection /> */}
-      {/* <CardSelection /> */}
+      <HeroSelection />
+      <CardSelection />
       <ServiceCard />
       <Content />
       <Form />

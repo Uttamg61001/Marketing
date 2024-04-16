@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="">
       
-      <HeroSelection />
+      {/* <HeroSelection /> */}
     
     <CardSelection />
     <ServiceCard/>

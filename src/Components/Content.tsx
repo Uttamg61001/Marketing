@@ -5,7 +5,7 @@ import Heading from "./Heading";
 
 function Content() {
   return (
-    <div className="h-screen py-20 w-full relative">
+    <div className="h-screen py-20 w-full relative" id='features'>
       <Heading text="Features"/>
       <LayoutGrid cards={cards} />
     </div>

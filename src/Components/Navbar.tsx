@@ -1,38 +1,55 @@
-'use client';
+"use client";
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 
 function Navbar({ className }: { className?: string }) {
-    const [active, setActive] = useState<string | null>(null);
+  const [active, setActive] = useState<string | null>(null);
   return (
     <div
-    className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
-  >
-    <Menu setActive={setActive}>
+      className={" bg-white w-full rounded-none "}
+    >
+      <Menu setActive={setActive}>
         <Link href={"/"}>
-        <MenuItem setActive={setActive} active={active} item="Home">
-        </MenuItem>
+          <MenuItem
+            setActive={setActive}
+            active={active}
+            item="Home"
+          ></MenuItem>
         </Link>
-        <MenuItem setActive={setActive} active={active} item="Services">
-            {/* <div className="flex flex-col text-sm space-y-4">
-            <HoveredLink href="/courses">All Courses</HoveredLink>
-            <HoveredLink href="/courses">Basic Music Theory</HoveredLink>
-            <HoveredLink href="/courses">Advanced Composition</HoveredLink>
-            <HoveredLink href="/courses">Song Writing</HoveredLink>
-            <HoveredLink href="/courses">Music Production</HoveredLink>
-            </div> */}
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="About"></MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Features"></MenuItem>
-        <Link href={"/contact"}>
-        <MenuItem setActive={setActive} active={active} item="Contact us">
-        </MenuItem>
+
+        <Link href={"#services"}>
+          <MenuItem
+            setActive={setActive}
+            active={active}
+            item="Services"
+          ></MenuItem>
+        </Link>
+        <Link href={"#about"}>
+          <MenuItem
+            setActive={setActive}
+            active={active}
+            item="About"
+          ></MenuItem>
+        </Link>
+        <Link href={"#features"}>
+          <MenuItem
+            setActive={setActive}
+            active={active}
+            item="Features"
+          ></MenuItem>
+        </Link>
+        <Link className=" hidden sm:block " href={"#contact-us"}>
+          <MenuItem
+            setActive={setActive}
+            active={active}
+            item="Contact us"
+          ></MenuItem>
         </Link>
       </Menu>
-  </div>
-  )
+    </div>
+  );
 }
 
-export default Navbar
+export default Navbar;

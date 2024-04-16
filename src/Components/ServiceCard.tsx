@@ -54,7 +54,7 @@ const content = [
   ];
 function ServiceCard() {
   return (
-    <div className="p-10">
+    <div className="p-10" id='services'>
       <Heading text="Services"/>
       <StickyScroll content={content} />
     </div>

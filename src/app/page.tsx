@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main>
       {/* <HeroSelection /> */}
-      <CardSelection />
+      {/* <CardSelection /> */}
       <ServiceCard />
       <Content />
       <Form />
